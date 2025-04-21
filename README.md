@@ -94,6 +94,8 @@ mkdir -p include
 curl -o include/matplotlibcpp.h https://raw.githubusercontent.com/lava/matplotlib-cpp/master/matplotlibcpp.h
 ```
 
+add  '''#include"matplotlibcpp.h"''' to the project
+
 ## Test matplotlib in Python
 
 ```bash
@@ -176,8 +178,11 @@ target_link_libraries(<your_executable_name> PRIVATE
     Python::NumPy
 )
 ```
+'' <optional_specific_file>.cpp'' can be main.cpp and mpc.cpp
 
-### Building the Project
+------------
+
+## Building the Project
 
 ```bash
 mkdir build
