@@ -16,7 +16,7 @@ This project depends on:
 - Python3, NumPy, matplotlib
 - matplotlib-cpp for plotting
 
-1. Install System Dependencies
+### 1. Install System Dependencies
 ------------------------------
 
 ```bash
@@ -27,7 +27,7 @@ sudo apt install -y build-essential cmake git \
   python3 python3-dev python3-numpy python3-matplotlib
 ```
 
-2. Install GCC/G++ 11
+### 2. Install GCC/G++ 11
 ---------------------
 
 ```bash
@@ -43,7 +43,7 @@ gcc --version
 g++ --version
 ```
 
-3. Build CasADi with IPOPT Support
+### 3. Build CasADi with IPOPT Support
 ----------------------------------
 
 ```bash
@@ -62,7 +62,7 @@ make -j$(nproc)
 sudo make install
 ```
 
-4. Example: CasADi C++ Project Setup
+### 4. Example: CasADi C++ Project Setup
 ------------------------------------
 
 Use the following tutorial project to verify your CasADi C++ build and environment:
@@ -78,29 +78,29 @@ make
 ./example_racecar
 ```
 
-5. matplotlib-cpp Setup for C++ Plotting
+### 5. matplotlib-cpp Setup for C++ Plotting
 ----------------------------------------
 
-### Install Python Dependencies
+ Install Python Dependencies
 
 ```bash
 sudo apt install python3-matplotlib python3-dev python3-numpy
 ```
 
-### Download the Header File
+## Download the Header File
 
 ```bash
 mkdir -p include
 curl -o include/matplotlibcpp.h https://raw.githubusercontent.com/lava/matplotlib-cpp/master/matplotlibcpp.h
 ```
 
-### Test matplotlib in Python
+## Test matplotlib in Python
 
 ```bash
 python3 -c "import matplotlib.pyplot as plt; plt.plot([1, 2, 3]); plt.show()"
 ```
 
-6. CMake Configuration (CasADi, IPOPT, Python/NumPy)
+### 6. CMake Configuration (CasADi, IPOPT, Python/NumPy)
 ----------------------------------------------------
 
 Below is a template CMakeLists.txt you can adapt to your project. Replace <your_project_name> and <your_executable_name> with your own.
