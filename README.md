@@ -87,16 +87,30 @@ make
 sudo apt install python3-matplotlib python3-dev python3-numpy
 ```
 
-## Download the Header File
+Download the Header File
 
 ```bash
 mkdir -p include
 curl -o include/matplotlibcpp.h https://raw.githubusercontent.com/lava/matplotlib-cpp/master/matplotlibcpp.h
 ```
 
-add  '''#include"matplotlibcpp.h"''' to the project
+add  '''#include"matplotlibcpp.h"''' to the project.
 
-## Test matplotlib in Python
+```bash
+Change the following part in 'matplotlibcpp.h'
+PyTuple_SetItem(args, 0, PyFloat_FromDouble(nrows));
+PyTuple_SetItem(args, 1, PyFloat_FromDouble(ncols));
+PyTuple_SetItem(args, 2, PyFloat_FromDouble(plot_number));
+```
+to:
+```bash
+PyTuple_SetItem(args, 0, PyLong_FromDouble(nrows));
+PyTuple_SetItem(args, 1, PyLong_FromDouble(ncols));
+PyTuple_SetItem(args, 2, PyLong_FromDouble(plot_number));
+```
+
+
+ Test matplotlib in Python:
 
 ```bash
 python3 -c "import matplotlib.pyplot as plt; plt.plot([1, 2, 3]); plt.show()"
