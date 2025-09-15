@@ -2,7 +2,7 @@
 LPV_MPC_cpp
 ===========
 
-LPV_MPC_cpp is a C++ implementation of Linear Parameter-Varying Model Predictive Control (LPV-MPC) using CasADi for automatic differentiation and IPOPT for nonlinear optimization. For visualization, matplotlib-cpp is used.
+LPV_MPC_cpp is a C++ implementation of Linear Parameter-Varying Model Predictive Control (LPV-MPC) using CasADi for automatic differentiation and IPOPT for nonlinear optimization. For visualization, matplotlib-cpp is used. tes
 
 Dependencies
 ------------
